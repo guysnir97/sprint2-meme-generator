@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #80808040;
+}
+
+@font-face {
+    font-family: anton;
+    src: url(fonts/font-anton/Anton-Regular.ttf);
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url(fonts/open_sans/OpenSans-Regular.ttf);
+}
+
+
+/* //galery page */
+
+
+/* //header */
+
+.container {
+    width: 100%;
+    position: fixed;
+}
+
+img {
+    height: 3rem;
+    width: 3rem;
+}
+
+.main-header {
+    background-color: rgb(236, 139, 11);
+    font-family: anton;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    top: 0;
+}
+
+.main-header .logo {
+    color: white;
+    margin-inline-start: 2rem;
+    font-size: 2rem;
+}
+
+.main-header .buttons>* {
+    border: none;
+    color: white;
+    font-family: open-sans;
+    font-size: 1.2rem;
+}
+
+.main-header .buttons>*:hover {
+    color: black;
+    box-shadow: inset 0px -4px 0px 0px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+/* //grid */
+
+.grid-container {
+    display: grid;
+    height: 80vh;
+    width: 49vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.main-gallery {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.8rem;
+    margin-block-start: 100px;
+}
+
+.footer {
+    background-color: rgb(236, 139, 11);
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* //meme-page */
+
+.meme {
+    object-fit: cover;
+}
+
+.canvas-container {
+    display: flex;
+    width: 85vw;
+    height: 54vh;
+    margin: 0 auto;
+    margin-top: 10rem;
+    flex-direction: column;
+}
+
+.canvas-func {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.func-text {
+    height: 4rem;
+    width: 28rem;
+    font-family: anton;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: open-sans;
+    font-weight: bold;
+    line-height: 1.5rem;
+    border-radius: 2em;
+}
+
+.icons.seconde.icon-2,
+.icons.third.icon-3 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.func-third {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.icons.third.icon-4 {
+    margin-right: 2rem;
+}
+
+.icons.third.icon-2 {
+    margin-left: 2rem;
+}
+
+.func-font {
+    height: 3rem;
+    width: 20rem;
+    font-family: anton;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: open-sans;
+    font-weight: bold;
+    line-height: 1.5rem;
+    border: none;
+    border-radius: 2em;
+    position: relative;
+    bottom: 15px;
+    font-weight: 300;
+}
+
+.icons.fourth.icon-3 {
+    display: inline-block;
+}
+
+.icons.fourth.icon-4 {
+    position: absolute;
+    visibility: hidden;
+}
+
+.icons.fith.icon-1 {
+    width: 18rem;
+    height: 2.8rem;
+    border: 1px solid black;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: open-sans;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.icons.fith.icon-2 {
+    position: absolute;
+    visibility: hidden;
+}
+
+::placeholder {
+    color: rgb(77, 63, 63);
+}
+
+.icons {
+    background: white;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+
+/* //helpers */
+
+.hide {
+    display: none;
+}
+
+.test {
+    margin-top: 10px;
+}
+
+@media (min-width:670px) {
+    .canvas-container {
+        flex-direction: row;
+    }
+}

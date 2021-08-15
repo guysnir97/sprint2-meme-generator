@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="init()">
+    <header class="main-header container">
+        <h3 class="main-header logo">memegen</h3>
+        <div class="main-header buttons">
+            <button class="main-header memes" onclick="showGallery()">Gallery</button>
+            <button class="main-header gallery">about</button>
+
+        </div>
+    </header>
+    <div class="main-gallery show-flex">
+        <div class="grid-container"></div>
+    </div>
+    <div class="share-container"></div>
+    <div class="canvas-container hide">
+        <canvas id="my-canvas" width="500" height="500"></canvas>
+        <div class="canvas-func">
+            <div class=func-first>
+                <label for="text"></label>
+                <input class="func-text" type="text" id="text" name="text" placeholder="text goes here" oninput="onGetTxtFromUser(this.value)">
+            </div>
+            <div class=func-seconde>
+                <button class="icons seconde icon-1" onclick="onSwitchLine()"><img
+                        src="icons/up-and-down-opposite-double-arrows-side-by-side.png" /> </button>
+                <button class="icons seconde icon-2" onclick="onSetNewline()"><img src="icons/add.png" /></button>
+                <button class="icons seconde icon-3" onclick="onRemoveLine()"><img src="icons/trash.png" /></button>
+            </div>
+            <div class=func-third>
+
+                <button class="icons third icon-1" onclick="onChangeSize('+')"><img
+                        src="icons/increase font - icon.png" /></button>
+                <button class="icons third icon-2" onclick="onChangeSize('-')"><img
+                        src="icons/decrease font - icon.png" /></button>
+                <button class="icons third icon-3" onclick="onChangeSide('left')"><img
+                        src="icons/align-to-left.png" /></button>
+                <button class="icons third icon-4" onclick="onChangeSide('center') "><img
+                        src="icons/center-text-alignment.png" /></button>
+                <button class="icons third icon-5" onclick="onChangeSide('right')"><img
+                        src="icons/align-to-right.png" /></button>
+            </div>
+            <div class="func-fourth ">
+                <select id="font" class="func-font " onchange="onChangeFont(this.value) ">
+                    <option value="impact ">Impact</option>
+                    <option value="serif ">Serif</option>
+                    <option value="monospace ">Monospace</option>
+                    <option value="Arial ">Ariel</option>
+                </select>
+                <button class="icons fourth icon-1" onclick="onChangeLocation('up')"><img
+                        src="icons/up-icon.png" /></button>
+                <button class="icons fourth icon-2" onclick="onChangeLocation('down')"><img
+                        src="icons/arrow-down.png" /></button>
+                <label class="icons fourth icon-3" for="font-color-img">
+                    <input class="icons fourth icon-4" type="color" id="font-color-img" value="#e66465"
+                        oninput="changeFontColor(this.value)">
+                    <img src="icons/paint-board-and-brush.png" alt="" />
+                </label>
+            </div>
+            <div class="func-five">
+                <label class="icons fith icon-1" for="font-color-img"> upload image
+                    <input type="file" class="icons fith icon-2" name="image" onchange="onImgInput(event)">
+                </label>
+            </div>
+        </div>
+
+
+    </div>
+    <footer class="footer ">all rights reserved</footer>
+    <script src="js/service/service-util.js "></script>
+    <script src="js/service/service-storage.js "></script>
+    <script src="js/service/service-meme.js "></script>
+    <script src="js/main/controller-img.js "></script>
+    <script src="js/main/controller-meme.js "></script>
+</body>
+
+</html>
